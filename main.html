@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>crud</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+
+<body>
+
+<div class="m-5 m-auto  w-50 shadow-lg p-5">
+  <h1>CRUD SYSTEM</h1>
+  <div class="mb-3">
+    <label for="productName" class="mb-2">Product Name</label>
+    <input type="text" class="form-control " id="productName" required>
+  </div>
+  <div class="alert alert-danger d-none"  id="alertName">
+    name is not valid!
+  </div>
+
+  <div class="mb-3">
+    <label for="productPrice" class="mb-2">product Price </label>
+    <input type="number" class="form-control" id="productPrice" required>
+  </div>
+  <div class="alert alert-danger d-none"  id="alertPrice">
+    Price is not valid!
+  </div>
+
+  <div class="mb-3">
+    <label for="productCategory" class="mb-2">product Category </label>
+    <input type="text" class="form-control" id="productCategory" required>
+  </div>
+  <div class="alert alert-danger d-none"  id="alertCategory">
+    Category is not valid!
+  </div>
+
+  <div class="mb-3">
+    <label for="productDescription" class="mb-2">product Desciription </label>
+    <textarea rows="5" cols="7" class="form-control" id="productDescription" required></textarea>
+  </div>
+
+
+  <button onclick="addProduct()" type="submit" class="btn btn-outline-info" id="btnAdd">Add product</button>
+  <button onclick="editProduct()"  type="submit" class="btn btn-outline-success" id="btnEdit">Edit product</button>
+  <button onclick="clearProduct()" type="submit" class="btn btn-outline-danger" id="btnClearForm">Clear Form</button>
+
+
+  
+
+</div>
+
+
+
+
+
+
+<div class="container w-100 m-auto mt-4">
+  <input id="searchinput" onkeyup="search()"  type="text" class=" w-25 form-control btn-outline-info m-auto" placeholder="search ">
+
+  </div>
+
+<div class=" w-50 shadow m-auto my-5">
+  <table class="table">
+  <thead>
+    <tr>
+      <th >Index</th>
+      <th >Name</th>
+      <th >Price</th>
+      <th >Category</th>
+      <th >Desciription</th>
+      <th >Update</th>
+      <th >Delete</th>
+    </tr>
+  </thead>
+
+  <tbody id="myTable" class="text-center">
+  
+   
+
+  </tbody>
+
+</table>
+</div>
+
+
+
+
+  <script src="js/jquery-3.6.3.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/crud.js"></script>
+</body>
+
+</html>

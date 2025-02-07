@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+#productDesciription{
+    resize: none;
+}
+
+#btnEdit{
+    display: none;
+}
+span{
+background-color:aquamarine;}
